@@ -1,0 +1,44 @@
+﻿@page "/"
+@* @rendermode InteractiveServer *@
+@rendermode @(new InteractiveServerRenderMode(prerender:false))
+
+
+@if (this.singeltonAlphaServiceLifetimeData != null)
+{
+    <h2>Singelton Alpha Service</h2>
+    <p>@this.singeltonAlphaServiceLifetimeData.InstanceInformation</p>
+}
+
+@if (this.singeltonBetaServiceLifetimeData != null)
+{
+    <h2>Singelton Beta Service</h2>
+    <p>@this.singeltonBetaServiceLifetimeData.InstanceInformation</p>
+}
+
+<hr />
+
+@if (this.scopedAlphaServiceLifetimeData != null)
+{
+    <h2>Scoped Alpha Service</h2>
+    <p>@this.scopedAlphaServiceLifetimeData.InstanceInformation</p>
+}
+
+@if (this.scopedBetaServiceLifetimeData != null)
+{
+    <h2>Scoped Beta Service</h2>
+    <p>@this.scopedBetaServiceLifetimeData.InstanceInformation</p>
+}
+
+<hr />
+
+@if (this.transientAlphaServiceLifetimeData != null)
+{
+    <h2>Transient Alpha Service</h2>
+    <p>@this.transientAlphaServiceLifetimeData.InstanceInformation</p>
+}
+
+@if (this.transientBetaServiceLifetimeData != null)
+{
+    <h2>Transient Beta Service</h2>
+    <p>@this.transientBetaServiceLifetimeData.InstanceInformation</p>
+}
